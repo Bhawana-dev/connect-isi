@@ -32,6 +32,7 @@ import ViewFeedbackPolls from "./components/ViewFeedbackPolls";
 import StudentsProfile from "./components/StudentsProfile";
 import EditStudentsProfile from "./components/EditStudentsProfile";
 import EditTeachersProfile from "./components/EditTeachersProfile";
+import ViewStudents from "./components/ViewStudents";
 
 class App extends Component {
 
@@ -74,6 +75,7 @@ class App extends Component {
                         <Route path="/EditStudentsProfile" exact component={EditStudentsProfile} />
                         <Route path="/ViewVotingPolls" exact component={ViewVotingPolls} />
                         <Route path="/ViewFeedbackPolls" exact component={ViewFeedbackPolls} />
+                        <Route path="/ViewStudents" exact component={ViewStudents} />
                         {/*end of super admin panel routes*/}
                         <Route path="/" component={Login} />
                     </Switch>

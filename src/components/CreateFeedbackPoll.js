@@ -3,7 +3,7 @@ import Menu from "./Menu";
 import {Link} from "react-router-dom";
 import teahersPic from "../assets/images/pic03.jpg";
 import axios from "axios";
-import Logo from '../assets/images/logo/isiNewCapture2.PNG';
+import Logo from '../assets/images/logo/applogo.png';
 //import '../assets/css/main.css';
 class CreateFeedbackPoll extends Component{
 
@@ -102,7 +102,7 @@ class CreateFeedbackPoll extends Component{
             <div>
                 {/*<Menu/>*/}
                 {/*// <!-- Header -->*/}
-                <header id="header">
+                <header id="header" style={{height:"57px"}}>
                     <a className="logo" href="/SuperadminDashboard">
                         <img src={Logo} style={{width: "13em"}}/>
                     </a>
@@ -187,10 +187,10 @@ class CreateFeedbackPoll extends Component{
                         <div className="content">
                             <section>
                                 <h3>Contact Us</h3>
-                                <p>Institut supérieur d'informatique
+                                <p><li><a><i className="icon fas fa-map-marker"></i>&nbsp;&nbsp;Institut supérieur d'informatique
                                     2100 boul. de Maisonneuve Est, étage #4
                                     Montréal, Québec
-                                    H2K 4S1</p>
+                                    H2K 4S1</a></li><br/><li><a><i className="icon fas fa-phone-square"></i>&nbsp;&nbsp;+1 514 567 3254</a></li></p>
                             </section>
                             <section>
                                 {/*<h4>Sem turpis amet semper</h4>*/}
@@ -212,8 +212,7 @@ class CreateFeedbackPoll extends Component{
                             </section>
                         </div>
                         <div className="copyright">
-                            &copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a
-                            href="https://coverr.co">Coverr</a>.
+                            &copy; Developed by Yolo team.
                         </div>
                     </div>
                 </footer>

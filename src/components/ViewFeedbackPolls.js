@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Menu from "./Menu";
 import {Link} from "react-router-dom";
-import Logo from '../assets/images/logo/isiNewCapture2.PNG';
+import Logo from '../assets/images/logo/applogo.png';
 import teahersPic from "../assets/images/pic03.jpg";
 //import '../assets/css/main.css';
 class ViewFeedbackPolls extends Component{
@@ -14,7 +14,7 @@ class ViewFeedbackPolls extends Component{
             <div>
                 {/*<Menu/>*/}
                 {/*// <!-- Header -->*/}
-                <header id="header">
+                <header id="header" style={{height:"57px"}}>
                     <a className="logo" href="/SuperadminDashboard">
                         <img src={Logo} style={{width: "13em"}}/>
                     </a>
@@ -111,8 +111,7 @@ class ViewFeedbackPolls extends Component{
                             </section>
                         </div>
                         <div className="copyright">
-                            &copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a
-                            href="https://coverr.co">Coverr</a>.
+                            &copy; Developed by Yolo team.
                         </div>
                     </div>
                 </footer>

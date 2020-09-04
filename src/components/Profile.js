@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import profilePic from '../assets/images/pic02.jpg';
+import profilePic from '../assets/images/icons/user.png';
 import Menu from "./Menu";
 import {Link} from "react-router-dom";
-import Logo from '../assets/images/logo/isiNewCapture2.PNG';
+import Logo from '../assets/images/logo/applogo.png';
 import axios from "axios";
 import jwt_decode from "jwt-decode";
 //import '../assets/css/main.css';
@@ -44,7 +44,7 @@ class Profile extends Component{
                 <div>
                 {/*<Menu/>*/}
                 {/*// <!-- Header -->*/}
-                <header id="header">
+                <header id="header" style={{height:"57px"}}>
                     <a className="logo" href="/SuperadminDashboard">
                         <img src={Logo} style={{width: "13em"}}/>
                     </a>
@@ -84,7 +84,7 @@ class Profile extends Component{
                                 <div className="col-6 col-12-medium">
 
                                     {/*// <!-- Text -->*/}
-                                    <img src={profilePic}/><br/><br/><br/>
+                                    <img src={profilePic} style={{width: "56%"}}/><br/><br/><br/>
                                     <ul className="actions">
 
                                         <li><Link to="/EditAdminProfile"><a className="button primary"><i className="fas fa-user-edit"></i>Edit
@@ -132,25 +132,23 @@ class Profile extends Component{
                     <div className="inner">
                         <div className="content">
                             <section>
-                                <h3>Accumsan montes viverra</h3>
-                                <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem
-                                    non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed
-                                    ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing. Lorem
-                                    ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing
-                                    eu felis iaculis volutpat ac adipiscing sed feugiat eu faucibus. Integer ac sed amet
-                                    praesent. Nunc lacinia ante nunc ac gravida.</p>
+                                <h3>Contact Us</h3>
+                                <p><li><a><i className="icon fas fa-map-marker"></i>&nbsp;&nbsp;Institut supérieur d'informatique
+                                    2100 boul. de Maisonneuve Est, étage #4
+                                    Montréal, Québec
+                                    H2K 4S1</a></li><br/><li><a><i className="icon fas fa-phone-square"></i>&nbsp;&nbsp;+1 514 567 3254</a></li></p>
                             </section>
                             <section>
-                                <h4>Sem turpis amet semper</h4>
-                                <ul className="alt">
-                                    <li><a href="#">Dolor pulvinar sed etiam.</a></li>
-                                    <li><a href="#">Etiam vel lorem sed amet.</a></li>
-                                    <li><a href="#">Felis enim feugiat viverra.</a></li>
-                                    <li><a href="#">Dolor pulvinar magna etiam.</a></li>
-                                </ul>
+                                {/*<h4>Sem turpis amet semper</h4>*/}
+                                {/*<ul className="alt">*/}
+                                {/*    <li><a href="#">Dolor pulvinar sed etiam.</a></li>*/}
+                                {/*    <li><a href="#">Etiam vel lorem sed amet.</a></li>*/}
+                                {/*    <li><a href="#">Felis enim feugiat viverra.</a></li>*/}
+                                {/*    <li><a href="#">Dolor pulvinar magna etiam.</a></li>*/}
+                                {/*</ul>*/}
                             </section>
                             <section>
-                                <h4>Magna sed ipsum</h4>
+                                <h4>Reach us here</h4>
                                 <ul className="plain">
                                     <li><a href="#"><i className="icon fa-twitter">&nbsp;</i>Twitter</a></li>
                                     <li><a href="#"><i className="icon fa-facebook">&nbsp;</i>Facebook</a></li>
@@ -160,8 +158,7 @@ class Profile extends Component{
                             </section>
                         </div>
                         <div className="copyright">
-                            &copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a
-                            href="https://coverr.co">Coverr</a>.
+                            &copy; Developed by Yolo team.
                         </div>
                     </div>
                 </footer>

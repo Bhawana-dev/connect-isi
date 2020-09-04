@@ -4,13 +4,14 @@ import {Link} from "react-router-dom";
 import profilePic from "../assets/images/pic02.jpg";
 import jwt_decode from "jwt-decode";
 import axios from "axios";
-import Logo from '../assets/images/logo/isiNewCapture2.PNG';
+import Logo from '../assets/images/logo/applogo.png';
 //import '../assets/css/main.css';
 class EditAdminProfile extends Component{
 
     constructor() {
         super();
         this.state = {
+            id:'',
             f_name: '',
             l_name: '',
             email:'',
@@ -39,6 +40,8 @@ class EditAdminProfile extends Component{
         console.log("dataa "+this.state.data.f_name)
     }
     handleUpdate = (e) =>{
+        let id = sessionStorage.getItem('token');
+
         console.log("handleSubmit");
         if(this.state.f_name === '')
         {
@@ -78,6 +81,7 @@ class EditAdminProfile extends Component{
         }
 
         const data = {
+            id: id,
             f_name: this.state.f_name,
             l_name: this.state.l_name,
             email: this.state.email,
@@ -85,7 +89,7 @@ class EditAdminProfile extends Component{
             // u_pwd: this.state.password,
             // u_type: 1
         }
-        console.log("update"+data.f_name,data.l_name,data.email,data.u_name)
+        console.log("update "+data.id,data.f_name,data.l_name,data.email,data.u_name)
         let action = axios.post('https://connect-isi.herokuapp.com/updateuser',data).then(response => {
             console.log("inside axios");
             console.log("Response",response);
@@ -115,7 +119,7 @@ class EditAdminProfile extends Component{
             <div>
                 {/*<Menu/>*/}
                 {/*// <!-- Header -->*/}
-                <header id="header">
+                <header id="header" style={{height:"57px"}}>
                     <a className="logo" href="/SuperadminDashboard">
                         <img src={Logo} style={{width: "13em"}}/>
                     </a>
@@ -227,10 +231,10 @@ class EditAdminProfile extends Component{
                         <div className="content">
                             <section>
                                 <h3>Contact Us</h3>
-                                <p>Institut supérieur d'informatique
+                                <p><li><a><i className="icon fas fa-map-marker"></i>&nbsp;&nbsp;Institut supérieur d'informatique
                                     2100 boul. de Maisonneuve Est, étage #4
                                     Montréal, Québec
-                                    H2K 4S1</p>
+                                    H2K 4S1</a></li><br/><li><a><i className="icon fas fa-phone-square"></i>&nbsp;&nbsp;+1 514 567 3254</a></li></p>
                             </section>
                             <section>
                                 {/*<h4>Sem turpis amet semper</h4>*/}
@@ -252,8 +256,7 @@ class EditAdminProfile extends Component{
                             </section>
                         </div>
                         <div className="copyright">
-                            &copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a
-                            href="https://coverr.co">Coverr</a>.
+                            &copy; Developed by Yolo team.
                         </div>
                     </div>
                 </footer>

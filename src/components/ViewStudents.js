@@ -3,7 +3,7 @@ import Menu from "./Menu";
 import {Link} from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import axios from "axios";
-import Logo from '../assets/images/logo/isiNewCapture2.PNG';
+import Logo from '../assets/images/logo/applogo.png';
 //import '../assets/css/main.css';
 class ViewStudents extends Component{
 
@@ -23,7 +23,7 @@ class ViewStudents extends Component{
         //         "Content-Type":'application/json'
         //     }
         // }
-        const response = await fetch('https://connect-isi.herokuapp.com/getuserbytype?u_type=2')
+        const response = await fetch('https://connect-isi.herokuapp.com/getuserbytype?u_type=3')
         const data = await response.json();
         this.setState({
             data: data
@@ -69,15 +69,13 @@ class ViewStudents extends Component{
             <div>
                 {/*<Menu/>*/}
                 {/*// <!-- Header -->*/}
-                <header id="header">
+                <header id="header" style={{height:"57px"}}>
                     <a className="logo" href="/SuperadminDashboard">
                         <img src={Logo} style={{width: "13em"}}/>
                     </a>
                     <nav>
-                        <Link to="/SuperadminDashboard"><a>Dashboard</a></Link>
-                        <Link to={"/AddAdmin"}><a>Add Teacher</a></Link>
-                        <Link to="/ViewAdmins"><a>View Teachers</a></Link>
-                        <Link to="/Profile"><a>Profile</a></Link>
+                        <Link to="/StudentsDashboard"><a>Dashboard</a></Link>
+                        <Link to="/StudentsProfile"><a>Profile</a></Link>
                         <Link to="/"><a>Logout</a></Link>
                         {/*<a href="#menu">Menu</a>*/}
                         {/*<a href="#menu">Menu</a>*/}
@@ -150,14 +148,14 @@ class ViewStudents extends Component{
 
                 {/*// <!-- Footer -->*/}
                 <footer id="footer">
-                    <div class="inner">
-                        <div class="content">
+                    <div className="inner">
+                        <div className="content">
                             <section>
                                 <h3>Contact Us</h3>
-                                <p>Institut supérieur d'informatique
+                                <p><li><a><i className="icon fas fa-map-marker"></i>&nbsp;&nbsp;Institut supérieur d'informatique
                                     2100 boul. de Maisonneuve Est, étage #4
                                     Montréal, Québec
-                                    H2K 4S1</p>
+                                    H2K 4S1</a></li><br/><li><a><i className="icon fas fa-phone-square"></i>&nbsp;&nbsp;+1 514 567 3254</a></li></p>
                             </section>
                             <section>
                                 {/*<h4>Sem turpis amet semper</h4>*/}
@@ -178,8 +176,8 @@ class ViewStudents extends Component{
                                 </ul>
                             </section>
                         </div>
-                        <div class="copyright">
-                            &copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a href="https://coverr.co">Coverr</a>.
+                        <div className="copyright">
+                            &copy; Developed by Yolo team.
                         </div>
                     </div>
                 </footer>

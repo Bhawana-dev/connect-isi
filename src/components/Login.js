@@ -165,8 +165,8 @@ class Login extends Component {
 
                             <div className="text-center p-t-136">
                                 <a className="txt2" href="#">
-                                    Create your Account
-                                    <i className="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                                    {/*Create your Account*/}
+                                    {/*<i className="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>*/}
                                 </a>
                             </div>
                         </div> {/*form Close*/}

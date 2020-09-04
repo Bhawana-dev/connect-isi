@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import Menu from "./Menu";
 import {Link} from "react-router-dom";
-import teahersPic from "../assets/images/pic03.jpg";
+import teahersPic from "../assets/images/icons/user.png";
 //import '../assets/css/main.css';
-import Logo from '../assets/images/logo/isiNewCapture2.PNG';
+//import Logo from '../assets/images/logo/isiNewCapture2.PNG';
+import Logo from '../assets/images/logo/applogo.png';
 class VotingPollResults extends Component{
 
     constructor() {
@@ -14,7 +15,7 @@ class VotingPollResults extends Component{
             <div>
                 {/*<Menu/>*/}
                 {/*// <!-- Header -->*/}
-                <header id="header">
+                <header id="header" style={{height:"57px"}}>
                     <a className="logo" href="/SuperadminDashboard">
                         <img src={Logo} style={{width: "13em"}}/>
                     </a>
@@ -50,7 +51,7 @@ class VotingPollResults extends Component{
                             <div className="row">
                                 <div className="col-4 col-12-medium">
                                     <div className="row">
-                                        <img src={teahersPic} />
+                                        <img src={teahersPic} style={{width:"84%"}}/>
                                     </div>
                                 </div>
                                 <div className="col-8 col-12-medium">
@@ -78,10 +79,10 @@ class VotingPollResults extends Component{
                         <div className="content">
                             <section>
                                 <h3>Contact Us</h3>
-                                <p>Institut supérieur d'informatique
+                                <p><li><a><i className="icon fas fa-map-marker"></i>&nbsp;&nbsp;Institut supérieur d'informatique
                                     2100 boul. de Maisonneuve Est, étage #4
                                     Montréal, Québec
-                                    H2K 4S1</p>
+                                    H2K 4S1</a></li><br/><li><a><i className="icon fas fa-phone-square"></i>&nbsp;&nbsp;+1 514 567 3254</a></li></p>
                             </section>
                             <section>
                                 {/*<h4>Sem turpis amet semper</h4>*/}
@@ -103,8 +104,7 @@ class VotingPollResults extends Component{
                             </section>
                         </div>
                         <div className="copyright">
-                            &copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a
-                            href="https://coverr.co">Coverr</a>.
+                            &copy; Developed by Yolo team.
                         </div>
                     </div>
                 </footer>

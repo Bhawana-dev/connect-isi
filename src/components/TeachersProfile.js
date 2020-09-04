@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import profilePic from '../assets/images/pic02.jpg';
+import profilePic from '../assets/images/icons/user.png';
 import Menu from "./Menu";
 import {Link} from "react-router-dom";
 import axios from "axios";
-import Logo from '../assets/images/logo/isiNewCapture2.PNG';
+import Logo from '../assets/images/logo/applogo.png';
 import jwt_decode from "jwt-decode";
 //import '../assets/css/main.css';
 class TeachersProfile extends Component{
@@ -43,7 +43,7 @@ class TeachersProfile extends Component{
                 <div>
                     {/*<Menu/>*/}
                     {/*// <!-- Header -->*/}
-                    <header id="header">
+                    <header id="header" style={{height:"57px"}}>
                         <a className="logo" href="/SuperadminDashboard">
                             <img src={Logo} style={{width: "13em"}}/>
                         </a>
@@ -79,7 +79,7 @@ class TeachersProfile extends Component{
                                     <div className="col-6 col-12-medium">
 
                                         {/*// <!-- Text -->*/}
-                                        <img src={profilePic}/><br/><br/><br/>
+                                        <img src={profilePic} style={{width: "56%"}}/><br/><br/><br/>
                                         <ul className="actions">
 
                                             <li><Link to="/EditTeachersProfile"><a className="button primary"><i className="fas fa-user-edit"></i>Edit
@@ -128,10 +128,10 @@ class TeachersProfile extends Component{
                             <div className="content">
                                 <section>
                                     <h3>Contact Us</h3>
-                                    <p>Institut supérieur d'informatique
+                                    <p><li><a><i className="icon fas fa-map-marker"></i>&nbsp;&nbsp;Institut supérieur d'informatique
                                         2100 boul. de Maisonneuve Est, étage #4
                                         Montréal, Québec
-                                        H2K 4S1</p>
+                                        H2K 4S1</a></li><br/><li><a><i className="icon fas fa-phone-square"></i>&nbsp;&nbsp;+1 514 567 3254</a></li></p>
                                 </section>
                                 <section>
                                     {/*<h4>Sem turpis amet semper</h4>*/}
@@ -153,8 +153,7 @@ class TeachersProfile extends Component{
                                 </section>
                             </div>
                             <div className="copyright">
-                                &copy; Developed by Yolo team. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a
-                                href="https://coverr.co">Coverr</a>.
+                                &copy; Developed by Yolo team.
                             </div>
                         </div>
                     </footer>
