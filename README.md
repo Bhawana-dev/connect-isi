@@ -1,4 +1,35 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+->Project Name: ISI CONNECT
+
+->Project functionalities:
+Super Admin (Administration) : 
+	-Can see and edit their profile.
+	-add teachers.
+	-see list of teachers.
+	-can delete teacher.
+	-can create feedback poll.
+	-can create voting poll.
+	-can see results of feedback
+	-can see results of voting polls
+	
+Admin (Teacher): 
+	-can see and edit their profile
+	-add students
+	-see students list
+	-can delete students
+	-can see voting result
+
+User (Student) : Wants to respond to voting polls which are created by Admin. Also, they want to submit feedback votes for teachers created by Super admin. 
+	-can see their profile
+	-can update their profile
+	-can answer the voting polls
+	-can answer the feedback polls
+
+->Used Technologies:
+Frontend: Html, css, javascript, bootstrap, react.js
+backend: heroku(node.js)
+database: MySql
+
 
 ## Available Scripts
 
